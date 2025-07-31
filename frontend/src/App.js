@@ -4,6 +4,9 @@ import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
 
+
+const departmentsRoutes = require('./routes/departments');
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -14,6 +17,7 @@ const theme = createTheme({
     },
   },
 });
+app.use('/api/departments', departmentsRoutes);
 
 export default function App() {
   return (
